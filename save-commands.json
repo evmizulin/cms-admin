@@ -1,0 +1,8 @@
+{
+    "commands": [
+        "src/**/*.js : ./node_modules/.bin/prettier --print-width 110 --no-semi --single-quote --trailing-comma es5 --write {absPath}{filename}",
+        "src/**/*.js : ./node_modules/.bin/eslint --fix {absPath}{filename}",
+        "server/**/*.js : ./node_modules/.bin/prettier --print-width 110 --no-semi --single-quote --trailing-comma es5 --write {absPath}{filename}",
+        "server/**/*.js : ./node_modules/.bin/eslint --fix {absPath}{filename}"
+    ]
+}

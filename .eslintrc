@@ -1,0 +1,15 @@
+{
+  "extends": "react-app",
+  "rules": {
+    #  "lines-between-class-members": [1, "always"], # added in eslint 4.9.0
+     "arrow-parens": [1, "as-needed"],
+     "comma-dangle": [1,"always-multiline"],
+     "no-console": 1,
+     "react/require-default-props": 1,
+     "react/prop-types": 1,
+     "react/default-props-match-prop-types": 1,
+     "react/no-unused-prop-types": 1,
+     "prefer-template": 1,
+     "no-useless-concat": 1
+    }
+}
