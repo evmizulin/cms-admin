@@ -1,0 +1,23 @@
+.text-center {
+text-align: center; }
+
+.text-right {
+text-align: right; }
+
+.text-left {
+text-align: left; }
+
+.text-italic {
+font-style: italic; }
+
+.text-one-line {
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.text-smaller-xs { font-size: 0.9em; }
+
+.text-no-underline {
+  text-decoration: none;
+}
