@@ -5,6 +5,8 @@ import YouTube from 'react-youtube'
 import { Link } from 'react-router-dom'
 import { routes } from 'src/lib/services/Routes'
 import { config } from 'src/config'
+import { Grid } from 'material-ui'
+import { Icon } from 'src/lib/components/Icon'
 
 import { cn } from './Landing.style'
 
@@ -12,19 +14,31 @@ export class Landing extends React.Component {
   render() {
     return (
       <PageContainer>
-        <div className={`p-md text-right header ${cn.header}`}>
-          <span className="pr-sm">
-            <Link to={routes.login()} className="text-no-underline">
-              <Button onClick={() => {}} color="primary" size="lg" outlined>
-                Sign in
-              </Button>
-            </Link>
-          </span>
-          <Link to={routes.registration()} className="text-no-underline">
-            <Button onClick={() => {}} color="primary" size="lg" filled>
-              Sign up
-            </Button>
-          </Link>
+        <div className={`p-md ${cn.header}`}>
+          <Grid container spacing={8}>
+            <Grid item xs={6}>
+              <a href="https://github.com/evmizulin/any-json-cms" className="text-no-underline">
+                <Button onClick={() => {}} color="primary" size="lg">
+                  <span className="pr-sm">GitHub</span>
+                  <Icon type="link-external" size={16} />
+                </Button>
+              </a>
+            </Grid>
+            <Grid item xs={6} className={`text-right`}>
+              <span className="pr-sm">
+                <Link to={routes.login()} className="text-no-underline">
+                  <Button onClick={() => {}} color="primary" size="lg" outlined>
+                    Sign in
+                  </Button>
+                </Link>
+              </span>
+              <Link to={routes.registration()} className="text-no-underline">
+                <Button onClick={() => {}} color="primary" size="lg" filled>
+                  Sign up
+                </Button>
+              </Link>
+            </Grid>
+          </Grid>
         </div>
         <div className={cn.body}>
           <div className={cn.messages}>
