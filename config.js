@@ -1,5 +1,6 @@
 module.exports = {
   config: {
+    isDemo: true,
     prodAppServerHost: 'localhost',
     prodAppServerPort: 8081,
     devApiProtocol: 'http',

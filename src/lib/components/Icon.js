@@ -14,6 +14,7 @@ import { MdShortText as ShortText } from 'react-icons/md'
 import { MdFormatAlignLeft as FormatAlignLeft } from 'react-icons/md'
 import { GoMarkdown as Markdown } from 'react-icons/go'
 import { GoCode as Code } from 'react-icons/go'
+import { GoLinkExternal as LinkExternal } from 'react-icons/go'
 import { FaExclamation as Exclamation } from 'react-icons/fa'
 import { FaObjectGroup as ObjectGroup } from 'react-icons/fa'
 import clone from 'clone'
@@ -76,6 +77,7 @@ const MAP = {
   'entries-view-enum': Enum,
   'entries-view-reference': Reference,
   'entries-view-asset': Asset,
+  'link-external': LinkExternal,
 }
 
 const defaultStyles = {

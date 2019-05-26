@@ -21,6 +21,7 @@ In project root folder there are configuration file ```config.js```. Update it f
 ```js
 module.exports = {
   config: {
+    isDemo: true,
     prodAppServerHost: 'localhost',
     prodAppServerPort: 8081,
     devApiProtocol: 'http',
@@ -32,6 +33,7 @@ module.exports = {
 ```
 All parameters that have ```dev``` and ```prod``` prefixes, will be used for development and production environments respectively.
 
+- ```isDemo``` - there are several messages on the landing page of ```anyjsoncms.com``` informing that ```anyjsoncms.com``` is a demo server, set flag to ```false``` and it will hide messages;
 - ```prodAppServerHost``` - this parameter will be passed as ```host``` to run Node.js server;
 - ```prodAppServerPort``` - this parameter will be passed as ```port``` to run Node.js server;
 - ```apiProtocol``` - protocol of [API server](https://github.com/evmizulin/cms-api);

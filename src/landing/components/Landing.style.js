@@ -12,13 +12,14 @@ const { classes } = jss
       margin: 'auto',
       padding: '0 4px',
     },
-    firstMessage: {
+    messages: {
       marginTop: 60,
     },
     message: {
       background: colors.primary.l5t5,
       padding: 15,
       borderRadius: 2,
+      marginTop: 15,
     },
     title: {
       paddingTop: 40,
