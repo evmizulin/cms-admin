@@ -1,14 +1,12 @@
 {
   "name": "cms-admin",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "scripts": {
     "pre": "npm run pre-monaco && npm run pre-cookie",
     "pre-monaco": "rm -rf public/vs && cp -a node_modules/monaco-editor/min/vs public/",
     "pre-cookie": "rm -rf public/cookieconsent && cp -a node_modules/cookieconsent/build/. public/cookieconsent",
-    "post": "find build -type f -iname \\*.js.map -delete && find build -type f -iname \\*.css.map -delete",
-    "build": "npm run pre && react-scripts build && npm run post",
-    "build-source": "npm run pre && react-scripts build",
+    "build": "npm run pre && react-scripts build",
     "start": "npm run pre && react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "start.prod": "NODE_ENV=production forever start -a -p logs -l console.log server/index.js",
