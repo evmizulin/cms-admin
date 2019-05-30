@@ -6,6 +6,7 @@ const { classes } = jss
     header: {
       background: colors.white.main,
       boxShadow: '0px 1px 4px 0px rgba(13,26,44,.23)',
+      padding: 22,
     },
     body: {
       width: 760,
