@@ -1,5 +1,5 @@
-export const onConfirm = activationToken => ({
+export const onConfirm = confirmationToken => ({
   widget: 'emailConfirm',
   type: 'onConfirm',
-  payload: { activationToken },
+  payload: { confirmationToken },
 })

@@ -61,7 +61,7 @@ export const App = () => (
         <UnauthRoute exact path="/" component={Landing} />
         <UnauthRoute exact path="/login" component={Login} />
         <UnauthRoute exact path="/registration" component={Registration} />
-        <UnauthRoute exact path="/email-confirm/:activationToken" component={EmailConfirm} />
+        <UnauthRoute exact path="/signup/confirmation/:confirmationToken" component={EmailConfirm} />
         <UnauthRoute exact path="/recover-pass" component={RecoverPass} />
         <UnauthRoute exact path="/change-pass/:recoveryToken" component={ChangePass} />
         <UnauthRoute exact path="/contacts" component={Contacts} />

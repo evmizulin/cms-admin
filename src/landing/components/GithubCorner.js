@@ -19,7 +19,7 @@ export class GithubCorner extends React.Component {
               '125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2'
             }
             fill="currentColor"
-            class={`octo-arm ${cn.path}`}
+            className={`octo-arm ${cn.path}`}
           />
           <path
             d={

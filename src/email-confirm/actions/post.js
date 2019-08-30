@@ -1,12 +1,12 @@
 import { postFetcher } from 'src/email-confirm/fetchers/post'
 
-export function postAction(activationToken) {
+export function postAction(confirmationToken) {
   return function(dispatch, getState) {
     dispatch({
       widget: 'emailConfirm',
       type: 'postStart',
     })
-    postFetcher(activationToken)
+    postFetcher(confirmationToken)
       .then(() => {
         dispatch({
           widget: 'emailConfirm',

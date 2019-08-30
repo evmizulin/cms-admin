@@ -1,5 +1,5 @@
 import { fetch } from 'src/lib/services/Fetcher'
 
-export function postFetcher(activationToken) {
-  return fetch({ method: 'POST', url: `email-confirm`, body: { activationToken } })
+export function postFetcher(confirmationToken) {
+  return fetch({ method: 'POST', url: `signup/confirmation`, body: { confirmationToken } })
 }

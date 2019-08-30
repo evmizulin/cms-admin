@@ -14,7 +14,7 @@ class AEmailConfirm extends Component {
   static propTypes = {
     match: shape({
       params: shape({
-        activationToken: string.isRequired,
+        confirmationToken: string.isRequired,
       }).isRequired,
     }).isRequired,
     onConfirm: func.isRequired,
@@ -23,7 +23,7 @@ class AEmailConfirm extends Component {
 
   componentDidMount() {
     const { match, onConfirm } = this.props
-    onConfirm(match.params.activationToken)
+    onConfirm(match.params.confirmationToken)
   }
 
   render() {

@@ -18,8 +18,8 @@ export function postError(state, error) {
   errorSet(state, { show: true, error })
 }
 
-export function onConfirm(state, { activationToken }) {
-  setTimeout(() => dispatch(postAction(activationToken)), 0)
+export function onConfirm(state, { confirmationToken }) {
+  setTimeout(() => dispatch(postAction(confirmationToken)), 0)
 }
 
 const modifiers = {
