@@ -11,7 +11,7 @@ import { Models } from 'src/models/components/Models'
 import { Entries } from 'src/entries/components/Entries'
 import { Projects } from 'src/projects/components/Projects'
 import { Login } from 'src/login/components/Login'
-import { Registration } from 'src/registration/components/Registration'
+import { Signup } from 'src/signup/components/Signup'
 import { EmailConfirm } from 'src/email-confirm/components/EmailConfirm'
 import { RecoverPass } from 'src/recover-pass/components/RecoverPass'
 import { ChangePass } from 'src/change-pass/components/ChangePass'
@@ -60,7 +60,7 @@ export const App = () => (
         />
         <UnauthRoute exact path="/" component={Landing} />
         <UnauthRoute exact path="/login" component={Login} />
-        <UnauthRoute exact path="/registration" component={Registration} />
+        <UnauthRoute exact path="/signup" component={Signup} />
         <UnauthRoute exact path="/signup/confirmation/:confirmationToken" component={EmailConfirm} />
         <UnauthRoute exact path="/recover-pass" component={RecoverPass} />
         <UnauthRoute exact path="/change-pass/:recoveryToken" component={ChangePass} />

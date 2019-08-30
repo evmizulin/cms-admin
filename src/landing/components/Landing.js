@@ -23,7 +23,7 @@ export class Landing extends React.Component {
                 </Button>
               </Link>
             </span>
-            <Link to={routes.registration()} className="text-no-underline">
+            <Link to={routes.signup()} className="text-no-underline">
               <Button onClick={() => {}} color="primary" size="lg" filled>
                 Sign up
               </Button>

@@ -9,14 +9,14 @@ import { Button } from 'src/lib/components/Button'
 import { Typography } from 'src/lib/components/Typography'
 import { validate } from 'src/lib/services/Validator'
 import { MessageBlock } from 'src/lib/components/MessageBlock'
-import { onDone } from 'src/registration/actions/onDone'
+import { onDone } from 'src/signup/actions/onDone'
 import { routes } from 'src/lib/services/Routes'
 import { Link } from 'react-router-dom'
 import { PageContainer } from 'src/lib/components/PageContainer'
 
-import { cn } from './Registration.style'
+import { cn } from './Signup.style'
 
-class ARegistration extends Component {
+class ASignup extends Component {
   static propTypes = {
     onDone: func.isRequired,
     loading: bool.isRequired,
@@ -154,12 +154,12 @@ class ARegistration extends Component {
   }
 }
 
-export const Registration = connect(
+export const Signup = connect(
   state => ({
-    loading: state.registration.loading.post,
-    showMessage: state.registration.showMessage,
+    loading: state.signup.loading.post,
+    showMessage: state.signup.showMessage,
   }),
   dispatch => ({
     onDone: (...props) => dispatch(onDone(...props)),
   })
-)(ARegistration)
+)(ASignup)

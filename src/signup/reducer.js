@@ -1,21 +1,21 @@
 import { errorSet, fetchingStart, fetchingEnd } from 'src/global/reducer'
-import { postAction } from 'src/registration/actions/post'
+import { postAction } from 'src/signup/actions/post'
 import { dispatch } from 'src/store'
 
 export function postStart(state) {
   fetchingStart(state)
-  state.registration.loading.post = true
+  state.signup.loading.post = true
 }
 
 export function postEnd(state) {
   fetchingEnd(state)
-  state.registration.loading.post = false
-  state.registration.showMessage = true
+  state.signup.loading.post = false
+  state.signup.showMessage = true
 }
 
 export function postError(state, error) {
   fetchingEnd(state)
-  state.registration.loading.post = false
+  state.signup.loading.post = false
   errorSet(state, { show: true, error })
 }
 
@@ -30,7 +30,7 @@ const modifiers = {
   onDone,
 }
 
-export const registrationReducer = (state, action) => {
+export const signupReducer = (state, action) => {
   const modifier = modifiers[action.type]
   modifier(state, action.payload)
 }

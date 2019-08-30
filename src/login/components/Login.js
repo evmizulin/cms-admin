@@ -99,7 +99,7 @@ class ALogin extends Component {
             </Button>
             <div className={`pt-lg ${cn.link}`}>
               <div>
-                <Link to={routes.registration()}>Create an account</Link>
+                <Link to={routes.signup()}>Create an account</Link>
               </div>
               <div>
                 <Link to={routes.recoverPass()}>Forgot your password?</Link>

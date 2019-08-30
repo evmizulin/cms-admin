@@ -65,8 +65,8 @@ class Routes {
     return `/login`
   }
 
-  registration() {
-    return `/registration`
+  signup() {
+    return `/signup`
   }
 
   recoverPass() {

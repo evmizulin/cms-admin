@@ -1,21 +1,21 @@
-import { postFetcher } from 'src/registration/fetchers/post'
+import { postFetcher } from 'src/signup/fetchers/post'
 
 export function postAction(creds) {
   return function(dispatch, getState) {
     dispatch({
-      widget: 'registration',
+      widget: 'signup',
       type: 'postStart',
     })
     postFetcher(creds)
       .then(() => {
         dispatch({
-          widget: 'registration',
+          widget: 'signup',
           type: 'postEnd',
         })
       })
       .catch(error => {
         dispatch({
-          widget: 'registration',
+          widget: 'signup',
           type: 'postError',
           payload: error,
         })

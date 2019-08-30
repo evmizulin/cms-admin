@@ -47,8 +47,8 @@ class AEmailConfirm extends Component {
               </span>
             ) : (
               <span>
-                Something went wrong. Try to reload page or try to{' '}
-                <Link to={routes.registration()}>sign up</Link> once again.
+                Something went wrong. Try to reload page or try to <Link to={routes.signup()}>sign up</Link>{' '}
+                once again.
               </span>
             )}
           </MessageBlock>

@@ -93,7 +93,7 @@ class ARecoverPass extends Component {
                 </Button>
                 <div className={`pt-lg text-smaller-xs`}>
                   <div>
-                    <Link to={routes.registration()}>Create an account</Link>
+                    <Link to={routes.signup()}>Create an account</Link>
                   </div>
                   <div>
                     <span>Have an account?</span> <Link to={routes.login()}>Sign in</Link>
