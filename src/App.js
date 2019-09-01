@@ -12,7 +12,7 @@ import { Entries } from 'src/entries/components/Entries'
 import { Projects } from 'src/projects/components/Projects'
 import { Login } from 'src/login/components/Login'
 import { Signup } from 'src/signup/components/Signup'
-import { EmailConfirm } from 'src/email-confirm/components/EmailConfirm'
+import { SignupConfirm } from 'src/signup/components/SignupConfirm'
 import { RecoverPass } from 'src/recover-pass/components/RecoverPass'
 import { ChangePass } from 'src/change-pass/components/ChangePass'
 import { Tokens } from 'src/tokens/components/Tokens'
@@ -61,7 +61,7 @@ export const App = () => (
         <UnauthRoute exact path="/" component={Landing} />
         <UnauthRoute exact path="/login" component={Login} />
         <UnauthRoute exact path="/signup" component={Signup} />
-        <UnauthRoute exact path="/signup/confirmation/:confirmationToken" component={EmailConfirm} />
+        <UnauthRoute exact path="/signup/confirmation/:confirmationToken" component={SignupConfirm} />
         <UnauthRoute exact path="/recover-pass" component={RecoverPass} />
         <UnauthRoute exact path="/change-pass/:recoveryToken" component={ChangePass} />
         <UnauthRoute exact path="/contacts" component={Contacts} />

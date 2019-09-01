@@ -9,7 +9,7 @@ import { Button } from 'src/lib/components/Button'
 import { Typography } from 'src/lib/components/Typography'
 import { validate } from 'src/lib/services/Validator'
 import { MessageBlock } from 'src/lib/components/MessageBlock'
-import { onDone } from 'src/signup/actions/onDone'
+import { onSignupClick } from 'src/signup/actions/onSignupClick'
 import { routes } from 'src/lib/services/Routes'
 import { Link } from 'react-router-dom'
 import { PageContainer } from 'src/lib/components/PageContainer'
@@ -18,9 +18,9 @@ import { cn } from './Signup.style'
 
 class ASignup extends Component {
   static propTypes = {
-    onDone: func.isRequired,
+    onSignupClick: func.isRequired,
     loading: bool.isRequired,
-    showMessage: bool.isRequired,
+    showCheckEmailMessage: bool.isRequired,
   }
 
   state = {
@@ -73,18 +73,18 @@ class ASignup extends Component {
     return valid
   }
 
-  onDone() {
-    const { onDone } = this.props
+  onSignupClick() {
+    const { onSignupClick } = this.props
     const { login, password } = this.state
     const valid = this.validate(['login', 'password', 'passwordAgain'])
     const validMatch = this.validateMatch()
     if (valid && validMatch) {
-      onDone({ login, password })
+      onSignupClick({ login, password })
     }
   }
 
   render() {
-    const { loading, showMessage } = this.props
+    const { loading, showCheckEmailMessage } = this.props
     const { login, loginError, password, passwordError, passwordAgain, passwordAgainError } = this.state
     return (
       <PageContainer>
@@ -93,7 +93,7 @@ class ASignup extends Component {
         <Loader />
         <div className="p-xxl text-center">
           <MessageBlock>
-            {showMessage ? (
+            {showCheckEmailMessage ? (
               <span>
                 We sent you an email to verify your email address (check your spam folder if you did not
                 receive this email). After verification you will be able to{' '}
@@ -134,7 +134,7 @@ class ASignup extends Component {
                     type={'password'}
                   />
                 </div>
-                <Button onClick={() => this.onDone()} color="primary" filled disabled={loading}>
+                <Button onClick={() => this.onSignupClick()} color="primary" filled disabled={loading}>
                   Submit
                 </Button>
                 <div className={`pt-lg ${cn.link}`}>
@@ -156,10 +156,10 @@ class ASignup extends Component {
 
 export const Signup = connect(
   state => ({
-    loading: state.signup.loading.post,
-    showMessage: state.signup.showMessage,
+    loading: state.signup.loading.signup,
+    showCheckEmailMessage: state.signup.showCheckEmailMessage,
   }),
   dispatch => ({
-    onDone: (...props) => dispatch(onDone(...props)),
+    onSignupClick: (...props) => dispatch(onSignupClick(...props)),
   })
 )(ASignup)

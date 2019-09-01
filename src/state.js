@@ -81,12 +81,10 @@ export const state = () => ({
   },
   signup: {
     loading: {
-      post: false,
+      signup: false,
     },
-    showMessage: false,
-  },
-  emailConfirm: {
-    status: 'loading',
+    showCheckEmailMessage: false,
+    confirmStatus: 'loading',
   },
   recoverPass: {
     loading: {

@@ -6,7 +6,6 @@ import { entriesReducer } from 'src/entries/reducer'
 import { projectsReducer } from 'src/projects/reducer'
 import { loginReducer } from 'src/login/reducer'
 import { signupReducer } from 'src/signup/reducer'
-import { emailConfirmReducer } from 'src/email-confirm/reducer'
 import { recoverPassReducer } from 'src/recover-pass/reducer'
 import { changePassReducer } from 'src/change-pass/reducer'
 import { tokensReducer } from 'src/tokens/reducer'
@@ -21,7 +20,6 @@ const MAP = {
   projects: projectsReducer,
   login: loginReducer,
   signup: signupReducer,
-  emailConfirm: emailConfirmReducer,
   recoverPass: recoverPassReducer,
   changePass: changePassReducer,
   tokens: tokensReducer,

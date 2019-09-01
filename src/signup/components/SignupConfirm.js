@@ -4,13 +4,13 @@ import { func, shape, oneOf, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { RedirectContainer } from 'src/global/components/RedirectContainer'
 import { ErrorContainer } from 'src/global/components/ErrorContainer'
-import { onConfirm } from 'src/email-confirm/actions/onConfirm'
+import { onConfirm } from 'src/signup/actions/onConfirm'
 import { MessageBlock } from 'src/lib/components/MessageBlock'
 import { routes } from 'src/lib/services/Routes'
 import { CircularProgress } from 'src/lib/components/CircularProgress'
 import { PageContainer } from 'src/lib/components/PageContainer'
 
-class AEmailConfirm extends Component {
+class ASignupConfirm extends Component {
   static propTypes = {
     match: shape({
       params: shape({
@@ -58,11 +58,11 @@ class AEmailConfirm extends Component {
   }
 }
 
-export const EmailConfirm = connect(
+export const SignupConfirm = connect(
   state => ({
-    status: state.emailConfirm.status,
+    status: state.signup.confirmStatus,
   }),
   dispatch => ({
     onConfirm: (...props) => dispatch(onConfirm(...props)),
   })
-)(AEmailConfirm)
+)(ASignupConfirm)
