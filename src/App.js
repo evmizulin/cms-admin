@@ -10,7 +10,7 @@ import { NotFound } from 'src/not-found/components/NotFound'
 import { Models } from 'src/models/components/Models'
 import { Entries } from 'src/entries/components/Entries'
 import { Projects } from 'src/projects/components/Projects'
-import { Login } from 'src/login/components/Login'
+import { Signin } from 'src/signin/components/Signin'
 import { Signup } from 'src/signup/components/Signup'
 import { SignupConfirm } from 'src/signup/components/SignupConfirm'
 import { RecoverPass } from 'src/recover-pass/components/RecoverPass'
@@ -26,7 +26,7 @@ import './App.style'
 
 // eslint-disable-next-line react/prop-types
 const AuthRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (auth.isSet() ? <Component {...props} /> : <Redirect to="/login" />)} />
+  <Route {...rest} render={props => (auth.isSet() ? <Component {...props} /> : <Redirect to="/signin" />)} />
 )
 
 // eslint-disable-next-line react/prop-types
@@ -59,7 +59,7 @@ export const App = () => (
           )}
         />
         <UnauthRoute exact path="/" component={Landing} />
-        <UnauthRoute exact path="/login" component={Login} />
+        <UnauthRoute exact path="/signin" component={Signin} />
         <UnauthRoute exact path="/signup" component={Signup} />
         <UnauthRoute exact path="/signup/confirmation/:confirmationToken" component={SignupConfirm} />
         <UnauthRoute exact path="/recover-pass" component={RecoverPass} />

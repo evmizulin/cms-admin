@@ -61,8 +61,8 @@ class Routes {
     return `/not-found`
   }
 
-  login() {
-    return `/login`
+  signin() {
+    return `/signin`
   }
 
   signup() {

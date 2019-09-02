@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { func } from 'prop-types'
+import { func, bool } from 'prop-types'
 import { connect } from 'react-redux'
 import { RedirectContainer } from 'src/global/components/RedirectContainer'
 import { ErrorContainer } from 'src/global/components/ErrorContainer'
@@ -9,16 +9,17 @@ import { TextField } from 'src/lib/components/fields/TextField'
 import { Button } from 'src/lib/components/Button'
 import { Typography } from 'src/lib/components/Typography'
 import { validate } from 'src/lib/services/Validator'
-import { onDone } from 'src/login/actions/onDone'
+import { onDone } from 'src/signin/actions/onDone'
 import { MessageBlock } from 'src/lib/components/MessageBlock'
 import { routes } from 'src/lib/services/Routes'
 import { PageContainer } from 'src/lib/components/PageContainer'
 
-import { cn } from 'src/login/components/Login.style'
+import { cn } from 'src/signin/components/Signin.style'
 
-class ALogin extends Component {
+class ASignin extends Component {
   static propTypes = {
     onDone: func.isRequired,
+    loading: bool.isRequired,
   }
 
   state = {
@@ -65,6 +66,7 @@ class ALogin extends Component {
 
   render() {
     const { login, loginError, password, passwordError } = this.state
+    const { loading } = this.props
     return (
       <PageContainer>
         <RedirectContainer />
@@ -94,7 +96,7 @@ class ALogin extends Component {
                 type={'password'}
               />
             </div>
-            <Button onClick={() => this.onDone()} color="primary" filled>
+            <Button onClick={() => this.onDone()} color="primary" filled disabled={loading}>
               Submit
             </Button>
             <div className={`pt-lg ${cn.link}`}>
@@ -112,9 +114,11 @@ class ALogin extends Component {
   }
 }
 
-export const Login = connect(
-  state => ({}),
+export const Signin = connect(
+  state => ({
+    loading: state.signin.loading.post,
+  }),
   dispatch => ({
     onDone: (...props) => dispatch(onDone(...props)),
   })
-)(ALogin)
+)(ASignin)

@@ -97,7 +97,7 @@ class ASignup extends Component {
               <span>
                 We sent you an email to verify your email address (check your spam folder if you did not
                 receive this email). After verification you will be able to{' '}
-                <Link to={routes.login()}>sign in</Link>.
+                <Link to={routes.signin()}>sign in</Link>.
               </span>
             ) : (
               // 'Please click on the link in this email to activate your
@@ -139,7 +139,7 @@ class ASignup extends Component {
                 </Button>
                 <div className={`pt-lg ${cn.link}`}>
                   <div>
-                    <span>Have an account?</span> <Link to={routes.login()}>Sign in</Link>
+                    <span>Have an account?</span> <Link to={routes.signin()}>Sign in</Link>
                   </div>
                   <div>
                     <Link to={routes.recoverPass()}>Forgot your password?</Link>

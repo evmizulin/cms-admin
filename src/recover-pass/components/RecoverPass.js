@@ -96,7 +96,7 @@ class ARecoverPass extends Component {
                     <Link to={routes.signup()}>Create an account</Link>
                   </div>
                   <div>
-                    <span>Have an account?</span> <Link to={routes.login()}>Sign in</Link>
+                    <span>Have an account?</span> <Link to={routes.signin()}>Sign in</Link>
                   </div>
                 </div>
               </div>

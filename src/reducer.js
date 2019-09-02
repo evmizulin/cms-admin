@@ -4,7 +4,7 @@ import { globalReducer } from 'src/global/reducer'
 import { modelsReducer } from 'src/models/reducer'
 import { entriesReducer } from 'src/entries/reducer'
 import { projectsReducer } from 'src/projects/reducer'
-import { loginReducer } from 'src/login/reducer'
+import { signinReducer } from 'src/signin/reducer'
 import { signupReducer } from 'src/signup/reducer'
 import { recoverPassReducer } from 'src/recover-pass/reducer'
 import { changePassReducer } from 'src/change-pass/reducer'
@@ -18,7 +18,7 @@ const MAP = {
   models: modelsReducer,
   entries: entriesReducer,
   projects: projectsReducer,
-  login: loginReducer,
+  signin: signinReducer,
   signup: signupReducer,
   recoverPass: recoverPassReducer,
   changePass: changePassReducer,

@@ -17,7 +17,7 @@ export class Landing extends React.Component {
         <div className={`${cn.header}`}>
           <div className={`text-right`}>
             <span className="pr-sm">
-              <Link to={routes.login()} className="text-no-underline">
+              <Link to={routes.signin()} className="text-no-underline">
                 <Button onClick={() => {}} color="primary" size="lg" outlined>
                   Sign in
                 </Button>

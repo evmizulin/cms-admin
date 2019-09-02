@@ -43,7 +43,7 @@ class ASignupConfirm extends Component {
           <MessageBlock>
             {status === 'success' ? (
               <span>
-                Email address verified. Now you are able to <Link to={routes.login()}>sign in</Link>.
+                Email address verified. Now you are able to <Link to={routes.signin()}>sign in</Link>.
               </span>
             ) : (
               <span>

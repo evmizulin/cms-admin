@@ -96,7 +96,7 @@ class AChangePass extends Component {
             {showMessage ? (
               <span>
                 Your password has been successfully updated. Now you are able to{' '}
-                <Link to={routes.login()}>sign in</Link>.
+                <Link to={routes.signin()}>sign in</Link>.
               </span>
             ) : (
               <div>
@@ -128,7 +128,7 @@ class AChangePass extends Component {
                 </Button>
                 <div className={`pt-lg text-smaller-xs`}>
                   <div>
-                    <span>Have an account?</span> <Link to={routes.login()}>Sign in</Link>
+                    <span>Have an account?</span> <Link to={routes.signin()}>Sign in</Link>
                   </div>
                   <div>
                     <Link to={routes.recoverPass()}>Forgot your password?</Link>

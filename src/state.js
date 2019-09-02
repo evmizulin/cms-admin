@@ -74,7 +74,7 @@ export const state = () => ({
       edit: { show: false, mount: false }, // { token, show, mount }
     },
   },
-  login: {
+  signin: {
     loading: {
       post: false,
     },
