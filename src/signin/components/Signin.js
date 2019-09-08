@@ -68,7 +68,7 @@ class ASignin extends Component {
     const { login, loginError, password, passwordError } = this.state
     const { loading } = this.props
     return (
-      <PageContainer>
+      <PageContainer dataTestAtr="page-signin">
         <RedirectContainer />
         <ErrorContainer />
         <Loader />

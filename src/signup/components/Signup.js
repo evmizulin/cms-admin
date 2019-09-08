@@ -87,7 +87,7 @@ class ASignup extends Component {
     const { loading, showCheckEmailMessage } = this.props
     const { login, loginError, password, passwordError, passwordAgain, passwordAgainError } = this.state
     return (
-      <PageContainer>
+      <PageContainer dataTestAtr="page-signup">
         <RedirectContainer />
         <ErrorContainer />
         <Loader />

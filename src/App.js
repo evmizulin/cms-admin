@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, MemoryRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from 'src/store'
 import { Redirect } from 'src/global/components/Redirect'
@@ -20,9 +20,22 @@ import { Explorer } from 'src/explorer/components/Explorer'
 import { Landing } from 'src/landing/components/Landing'
 import { Contacts } from 'src/contacts/components/Contacts'
 import { auth } from 'src/lib/services/Auth'
+import { config } from 'src/config'
 
 import './App.css'
 import './App.style'
+
+// eslint-disable-next-line react/prop-types
+const Router = ({ url, children, ...props }) => {
+  if (config.useMemoryRouter)
+    return (
+      <MemoryRouter initialEntries={[url]} initialIndex={0} {...props}>
+        {children}
+      </MemoryRouter>
+    )
+
+  return <BrowserRouter {...props}>{children}</BrowserRouter>
+}
 
 // eslint-disable-next-line react/prop-types
 const AuthRoute = ({ component: Component, ...rest }) => (
@@ -37,9 +50,10 @@ const UnauthRoute = ({ component: Component, ...rest }) => (
   />
 )
 
-export const App = () => (
+// eslint-disable-next-line react/prop-types
+export const App = ({ url }) => (
   <Provider store={store}>
-    <BrowserRouter>
+    <Router url={url}>
       <Switch>
         <AuthRoute exact path="/projects" component={Projects} />
         <AuthRoute
@@ -67,6 +81,6 @@ export const App = () => (
         <UnauthRoute exact path="/contacts" component={Contacts} />
         <Route path="*" component={NotFound} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   </Provider>
 )
