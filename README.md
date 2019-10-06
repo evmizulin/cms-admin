@@ -16,19 +16,17 @@ cd cms-admin
 npm install
 ```
 
-#### Step 3. Update configuration file.
-In project root folder there are configuration file ```config.js```. Update it for your needs.
+#### Step 3. Update configuration.
+In ```public/index.html``` there are configuration settings. Update it for your needs.
 ```js
-module.exports = {
-  config: {
-    isDemo: true,
-    prodAppServerHost: 'localhost',
-    prodAppServerPort: 8081,
-    devApiProtocol: 'http',
-    prodApiProtocol: 'https',
-    devApiHost: 'localhost:8080',
-    prodApiHost: 'api.anyjsoncms.com',
-  },
+window.config = {
+  isDemo: true,
+  prodAppServerHost: 'localhost',
+  prodAppServerPort: 8081,
+  devApiProtocol: 'http',
+  prodApiProtocol: 'https',
+  devApiHost: 'localhost:8080',
+  prodApiHost: 'api.anyjsoncms.com',
 }
 ```
 All parameters that have ```dev``` and ```prod``` prefixes, will be used for development and production environments respectively.
