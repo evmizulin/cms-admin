@@ -5,7 +5,7 @@ import YouTube from 'react-youtube'
 import { Link } from 'react-router-dom'
 import { routes } from 'src/lib/services/Routes'
 import { config } from 'src/config'
-// import { GithubCorner } from 'src/landing/components/GithubCorner'
+import { GithubCorner } from 'src/landing/components/GithubCorner'
 
 import { cn } from './Landing.style'
 
@@ -13,7 +13,7 @@ export class Landing extends React.Component {
   render() {
     return (
       <PageContainer>
-        {/* <GithubCorner /> */}
+        <GithubCorner />
         <div className={`${cn.header}`}>
           <div className={`text-right`}>
             <span className="pr-sm">
@@ -52,8 +52,8 @@ export class Landing extends React.Component {
             </div>
           </div>
           <div className={`${cn.title} pb-sm`}>
-            {/* Open source headless{' '} */}
-            Headless{' '}
+            {/* Headless{' '} */}
+            Open source headless{' '}
             <acronym title="Content Management System" lang="en">
               CMS
             </acronym>{' '}
