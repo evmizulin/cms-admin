@@ -1,4 +1,4 @@
-# [Any JSON CMS](http://anyjsoncms.com) - Admin application server
+# Any JSON CMS - Admin application server
 
 If you want to read general information about Any JSON CMS go [here](https://github.com/evmizulin/any-json-cms).
 
@@ -27,13 +27,13 @@ module.exports = {
     devApiProtocol: 'http',
     prodApiProtocol: 'https',
     devApiHost: 'localhost:8080',
-    prodApiHost: 'api.anyjsoncms.com',
+    prodApiHost: 'some-domain',
   },
 }
 ```
 All parameters that have ```dev``` and ```prod``` prefixes, will be used for development and production environments respectively.
 
-- ```isDemo``` - there are several messages on the landing page of ```anyjsoncms.com``` informing that ```anyjsoncms.com``` is a demo server, set flag to ```false``` and it will hide messages;
+- ```isDemo``` - there are several messages on the landing page informing that it is a demo server, set flag to ```false``` and it will hide messages;
 - ```prodAppServerHost``` - this parameter will be passed as ```host``` to run Node.js server;
 - ```prodAppServerPort``` - this parameter will be passed as ```port``` to run Node.js server;
 - ```apiProtocol``` - protocol of [API server](https://github.com/evmizulin/cms-api);
