@@ -6,6 +6,6 @@ module.exports = {
     devApiProtocol: 'http',
     prodApiProtocol: 'https',
     devApiHost: 'localhost:8080',
-    prodApiHost: 'api.anyjsoncms.com',
+    prodApiHost: 'some-domain',
   },
 }
